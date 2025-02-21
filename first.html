@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <link rel="stylesheet" href="first.css">
+    <script src="first.js" defer></script>
+</head>
+<body>
+
+<div class="wrapper">
+    <h3 class="form-title">User Signup</h3>
+    
+    <form id="userForm">
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <input type="text" id="fname" class="form-input" placeholder="First Name" required>
+            </div>
+            <div class="col-md-6 mb-3">
+                <input type="text" id="lname" class="form-input" placeholder="Last Name" required>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <input type="date" id="dob" class="form-input" required>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label class="gender-label">Gender:</label>
+                <input type="radio" name="userGender" value="Female" checked> Female
+                <input type="radio" name="userGender" value="Male" class="ms-3"> Male
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <input type="email" id="email" class="form-input" placeholder="Email" required>
+            </div>
+            <div class="col-md-6 mb-3">
+                <input type="tel" id="phone" class="form-input" placeholder="Phone Number" required>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 mb-3">
+                <select id="nation" class="form-input">
+                    <option value="" disabled selected>Select Your Country</option>
+                    <option value="USA">United States</option>
+                    <option value="UK">United Kingdom</option>
+                    <option value="CAN">Canada</option>
+                    <option value="AUS">Australia</option>
+                    <option value="GER">Germany</option>
+                    <option value="FRA">France</option>
+                    <option value="ITA">Italy</option>
+                    <option value="ESP">Spain</option>
+                    <option value="BRA">Brazil</option>
+                    <option value="JPN">Japan</option>
+                    <option value="CHN">China</option>
+                    <option value="IND">India</option>
+                    <option value="RUS">Russia</option>
+                    <option value="SAF">South Africa</option>
+                    <option value="MEX">Mexico</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <button type="submit" class="btn-submit">Register</button>
+        </div>
+    </form>
+
+    <hr>
+
+    <h3 class="table-title">Registered Users</h3>
+    <table class="table table-bordered mt-3">
+        <thead class="table-header">
+            <tr>
+                <th>Full Name</th>
+                <th>Date of Birth</th>
+                <th>Phone</th>
+                <th>Gender</th>
+                <th>Country</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+    </table>
+</div>
+
+</body>
+</html>
